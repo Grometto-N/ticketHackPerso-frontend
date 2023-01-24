@@ -1,3 +1,12 @@
+// récupération des données sur les carts depuis le local-storage
+let the_carts = [];
+const local_carts = JSON.parse(localStorage.getItem("carts_choice"));
+if(local_carts && local_carts.length >0){
+    the_carts = the_carts.concat(local_carts);
+    // on élimine les doublons
+    the_carts = the_carts.filter((x, i) => the_carts.indexOf(x) === i);
+}
+
 // Date du jour dans le calendrier
 document.querySelector('#date_input').valueAsDate = new Date();
 
@@ -5,20 +14,17 @@ document.querySelector('#date_input').valueAsDate = new Date();
 function update_Btn_book(){
     for (let i = 0; i < document.querySelectorAll('.btn_book').length; i++) {
         document.querySelectorAll('.btn_book')[i].addEventListener('click', function () {
-            // récuperation des données dans la div parente (class row)
-            const departure = this.parentNode.parentNode.children[0].textContent.split('>')[0].trim();
-            const arrival = this.parentNode.parentNode.children[0].textContent.split('>')[1].trim();
-            const dep_time = this.parentNode.parentNode.children[1].textContent;
-            const price = Number(this.parentNode.parentNode.children[2].textContent.split("€")[0]);
-            // on appelle la route pour sauver dans la collection cart
-            fetch(`http://localhost:3000/carts/new`, { method: 'POST',  headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({departure, arrival, dep_time, price})})
-            .then(response => response.json())
-            .then(data => {  
-                            if(data.result){
-                                window.location.assign("cart.html");
-                            }
-           })// fin du fetch 
+            // récuperation de l'id du voyage
+            const trip_id = this.id;
+            // on vérifie que ce voyage n'est pas déjà dans les carts et on l'enregistre dans le local-storage
+            if(!the_carts.some(elt => elt === trip_id)){
+                the_carts.push(trip_id);
+            }
+
+            localStorage.setItem("carts_choice", JSON.stringify(the_carts));
+            
+            // on navigue 
+            window.location.assign("cart.html");
         })
     }
 }
@@ -26,7 +32,7 @@ function update_Btn_book(){
 // fonction écrivant un voyage en html
 function one_row(trip){
     let row = `<div class="row"> 
-    <div> ${trip.departure} > ${trip.arrival}</div> <div>${trip.dep_time}</div> <div>${trip.price}€</div> <div><button class="btn_book" >Book</button></div>
+    <div> ${trip.departure} > ${trip.arrival}</div> <div>${trip.dep_time}</div> <div>${trip.price}€</div> <div><button class="btn_book"  id=${ trip.trip_id}>Book</button></div>
     </div>`;  
     return row;
  }
@@ -40,25 +46,27 @@ function one_row(trip){
     return allRow;
  }
 
+
+ // EVENEMENT 
+ // click sur le bouton de recherche
 document.querySelector('#btn2').addEventListener('click', function(){
-    console.log('click search');
     const departure = document.querySelector('#dep_input').value;
     const arrival = document.querySelector('#arr_input').value;
     const date = document.querySelector('#date_input').value;
-    
-    fetch('http://localhost:3000/travels',
+    fetch('http://localhost:3000/trips/travels',
     {method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({departure, arrival, date })})
     .then(response => response.json())
     .then(data => {
-      if(data.result && data.travels.length>0){
-        document.querySelector("#trip-found").innerHTML = all_trips(data.travels);
-        update_Btn_book();
-      }else {
-        document.querySelector("#trip-found").innerHTML =  `<img id="photo" src="./images/notfound.png" />
-        <p id="time">No trip found</p>`
-      }
-      
+
+        if(data.result && data.travels.length>0){
+            document.querySelector("#trip-found").innerHTML = all_trips(data.travels);
+            update_Btn_book();
+        }else {
+            document.querySelector("#trip-found").innerHTML =  `<img id="photo" src="./images/notfound.png" />
+            <p id="time">No trip found</p>`
+        }
+
  });
 });

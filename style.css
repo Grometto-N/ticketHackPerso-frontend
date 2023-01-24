@@ -1,0 +1,232 @@
+body{
+	margin: 0;
+	padding: 0;
+	
+}
+
+
+
+#container{
+	margin: 0%;
+	padding: 0%;
+	border: 0%;
+	height: 100vh;
+	width: 100vw;
+	background-image: url('./images/background.jpg');
+	background-position: center center;
+	background-size: cover;
+}
+
+#container_cart{
+	margin: 0%;
+	padding: 0%;
+	border: 0%;
+	height: 100vh;
+	width: 100vw;
+	background-color : #f1f3f3;
+	background-position: center center;
+}
+
+#headers{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	background-color: white;
+	margin: 0%;
+	padding: 0%;
+
+}
+
+.header-click{
+display: flex;
+justify-content: space-around;
+margin-top: -1px;
+}
+
+
+#Cart{
+	padding-right: 30%;
+	margin-top: 25%;
+	font-family:'IBM Plex Sans'
+}
+
+
+#book{
+	padding-right: 35%;
+	margin-top: 25%;
+	margin-right: 60%;
+	font-family:'IBM Plex Sans'
+}
+
+#ticketHack{
+	color: #61b6a0;
+	padding-left: 2%;
+	font-family:'IBM Plex Sans';
+}
+
+#text-content{
+display: inline;
+text-align: center;
+color:white;
+font-family:'IBM Plex Sans'
+}
+
+
+#box{
+	display: flex;
+	justify-content: space-around;
+}
+
+
+#search{
+	display:flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: white;
+	padding: 5%;
+	height: 50vh;
+	width: 20vw;
+	border-radius: 3%;
+	border: 2px;
+	padding:5px;
+}
+
+#trip-found{
+	background-color: white;
+	padding: 5%;
+	height: 50vh;
+	width: 20vw;
+	border-radius: 3%;
+	font-family: 'IBM Plex Sans';
+	display : flex;
+	flex-direction: column;
+    justify-content: flex-start;
+	align-items: center ;
+	padding:5px;
+	overflow-y:auto;
+}
+
+#photo{
+	height: 25vh;
+	width: 12,5vw;
+	padding-left: 10%;
+}
+
+
+#dep_input{
+	background: #F1F3F3;
+	border-radius: 5px;
+	border: none; 
+	width: 96%;
+	margin :5px;
+	color:gray;
+	height: 5vh;
+}
+
+#arr_input{
+	background: #F1F3F3;
+	color:gray;
+	border-radius: 5px;
+	border: none; 
+	width: 96%; 
+	margin : 5px;
+	color:gray;
+	height: 5vh;
+}
+
+#date_input{
+	background: #F1F3F3;
+	color:gray;
+	border-radius: 5px;
+	border: none; 
+	width: 96%; 
+	margin : 5px;
+	color:gray;
+	height: 5vh;
+}
+
+#btn2{
+	background: #61b6a0;
+	border-radius: 5px;
+	border: none;
+	width: 100%;
+	color: white;
+	height: 5vh;
+}
+
+#btn2:hover{
+	background-color: #26C855;
+    transform: scale(1.02);
+    box-shadow: 0 0 4px #111;
+    transition: .3s;
+}
+
+#time{
+	color:#61b6a0;
+}
+
+#message{
+	background-color: white;
+	color:#61b6a0;
+}
+
+#all_carts{
+	background-color: white;
+	color:#61b6a0;
+}
+
+.row{
+	background-color: lightgray;
+	display : flex;
+	flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+	width : 18vw;
+	height: 6vh;
+	margin-left: 5px;
+	margin-right: 0px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+}
+
+.btn_book{
+	background: #61b6a0;
+	border-radius: 5px;
+	border: none;
+	height: 5vh;
+	width: 4vw;
+	padding: 0px;
+	color: white;
+}
+
+.btn_book:hover{
+    background-color: #26C855;
+    transform: scale(1.01);
+    box-shadow: 0 0 4px #111;
+    transition: .3s;
+}
+
+#MyBookings{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10%;
+	margin-left: 14%;
+	height: 40vh;
+	width: 70vw;
+	background-color: white;
+	border-radius: 25px;
+}
+
+A{
+    text-decoration:none;
+    color:#61b6a0 ;
+}
+
+.top{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Open+Sans&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="headers">
+      <h1 id="ticketHack"><a href="./index.html">Tickethack</a></h1>
+      <div class="header-click">
+        <div id="Cart">
+          <p><a class="top" href="./cart.html">Cart</a></p>
+        </div>
+        <div id="book">
+          <p><a class="top" href="./booking.html">Bookings</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="text-content">
+        <h1>Explore the world effortlessly by train !</h1>
+        <p>
+          Compare, book and enjoy cheap prices for train tickets: your journey
+          starts on Tickethack
+        </p>
+      </div>
+
+      <div id="box">
+        <div id="search">
+          <div class="btn-1">
+            <input id="dep_input" type="text" name="message" value="Departure" onclick="javascript:this.value = '';" />
+            <input id="arr_input" type="text" name="message" value="Arrival" onclick="javascript:this.value = '';" />
+          </div>
+          <div class="btn-1">
+            <input id="date_input" type="date" name="message" value="" />
+          </div>
+
+          <div class="btn-1">
+            <button id="btn2" type="submit">Search</button>
+          </div>
+        </div>
+        <div id="trip-found"> 
+          <img id="photo" src="./images/train.png" />
+          <p id="time">It's time to book your future trip.</p>
+          <!-- <div class="row"> 
+            <div>Paris > Lyon</div> <div>18:48</div> <div>81€</div> <div><button class="btn_book" >Book</button></div>
+          </div>
+          <div class="row"> 
+            <div>Paris > Lyon</div> <div>18:48</div> <div>81€</div> <div><button class="btn_book" >Book</button></div>
+          </div>-->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

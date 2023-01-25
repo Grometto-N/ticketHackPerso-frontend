@@ -1,7 +1,7 @@
 
 function oneBook(trip){
     let row = `<div class="travel"> 
-    <div> ${trip.departure} > ${trip.arrival}</div> <div>${trip.dep_time}</div> <div>${trip.price}€</div> <div>Departure in  </div></div>`;  
+    <div class = "trip"> ${trip.departure} > ${trip.arrival}</div> <div>${trip.dep_time}</div> <div>${trip.price}€</div> <div>Departure in ${trip.before_departure} </div></div>`;  
     return row;
 };
 
@@ -17,7 +17,7 @@ function oneBook(trip){
  };
 
  fetch('http://localhost:3000/books').then(response => response.json())
- .then(data => {console.log('Nico')
+ .then(data => {
     if ( data.result){
     document.querySelector('#travelTable').innerHTML = all_books(data.travels)}
     else{}

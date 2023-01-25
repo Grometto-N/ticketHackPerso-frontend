@@ -51,10 +51,15 @@ margin-top: -1px;
 	font-family:'IBM Plex Sans'
 }
 
+
 #ticketHack{
 	color: #61b6a0;
 	padding-left: 2%;
 	font-family:'IBM Plex Sans';
+}
+
+#ticketHack:hover{
+	color: #26C855;
 }
 
 
@@ -87,6 +92,12 @@ A{
     color: black;
 }
 
+.top:hover{
+	color: #26C855;
+}
+
+
+
 #display_carts{
 	background-color: white;
 	color:black;
@@ -116,6 +127,10 @@ A{
 	border-radius: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.trip{
+	width : 12vw;
 }
 
 #footer_cart{
@@ -165,6 +180,7 @@ A{
     box-shadow: 0 0 10px #333;
     overflow: hidden;
     transition: .3s;
+	color : #ffff;
 }
 
 .btn_delete_cart:hover {

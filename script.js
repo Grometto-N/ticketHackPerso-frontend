@@ -32,7 +32,7 @@ function update_Btn_book(){
 // fonction écrivant un voyage en html
 function one_row(trip){
     let row = `<div class="row"> 
-    <div> ${trip.departure} > ${trip.arrival}</div> <div>${trip.dep_time}</div> <div>${trip.price}€</div> <div><button class="btn_book"  id=${ trip.trip_id}>Book</button></div>
+    <div class = "trip"> ${trip.departure} > ${trip.arrival}</div> <div>${trip.dep_time}</div> <div>${trip.price}€</div> <div><button class="btn_book"  id=${ trip.trip_id}>Book</button></div>
     </div>`;  
     return row;
  }

@@ -13,7 +13,7 @@ console.log("the_carts",the_carts)
 // fonction écrivant un voyage en html
 function one_cart(trip){
     let row = `<div class="row_cart"> 
-    <div> ${trip.departure} > ${trip.arrival}</div> <div>${trip.dep_time }</div> <div>${trip.price}€</div> <div><button class="btn_delete_cart" id=${trip.trip_id}>x</button></div>
+    <div class = "trip"> ${trip.departure} > ${trip.arrival}</div> <div>${trip.dep_time }</div> <div>${trip.price}€</div> <div><button class="btn_delete_cart" id=${trip.trip_id}>x</button></div>
     </div>`; 
     return row;
  }

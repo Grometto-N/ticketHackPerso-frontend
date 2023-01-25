@@ -4,6 +4,8 @@ body{
 }
 
 
+
+
 #container_cart{
 	margin: 0%;
 	padding: 0%;
@@ -57,12 +59,18 @@ margin-top: -1px;
 	font-family:'IBM Plex Sans';
 }
 
+#ticketHack:hover{
+	color: #26C855;
+}
+
+
+
 
 #message{
 	background-color: white;
 	color:black;
     font-family:'IBM Plex Sans';
-    height : 40vh;
+    height : 50vh;
     width : 60vw;
     border-radius : 10px; 
     display : flex;
@@ -82,15 +90,19 @@ margin-top: -1px;
     height: 8vh;
     width: 50vw;
     border-radius: 5px;
-    margin-bottom: 10% ;
+    margin-bottom: 2vh ;
     display:flex;
     justify-content: space-around;
     align-items: center;
 }
 
-#Bookings{
+.trip{
+    width: 12vw;
+}
 
-padding-bottom: 2%
+
+#Bookings{  
+    padding-bottom: 2%
 }
 
 #message_2{
@@ -113,3 +125,8 @@ A{
     text-decoration: none;
     color: black;
 }
+
+.top:hover{
+	color: #26C855;
+}
+

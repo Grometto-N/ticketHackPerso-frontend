@@ -64,6 +64,10 @@ margin-top: -1px;
 	font-family:'IBM Plex Sans';
 }
 
+#ticketHack:hover{
+	color: #26C855;
+}
+
 #text-content{
 display: inline;
 text-align: center;
@@ -81,11 +85,12 @@ font-family:'IBM Plex Sans'
 #search{
 	display:flex;
 	justify-content: space-around;
+	align-items: center;
 	flex-direction: column;
 	background-color: white;
 	padding: 5%;
 	height: 50vh;
-	width: 20vw;
+	width: 22vw;
 	border-radius: 3%;
 	border: 2px;
 	padding:5px;
@@ -95,7 +100,7 @@ font-family:'IBM Plex Sans'
 	background-color: white;
 	padding: 5%;
 	height: 50vh;
-	width: 20vw;
+	width: 24vw;
 	border-radius: 3%;
 	font-family: 'IBM Plex Sans';
 	display : flex;
@@ -117,8 +122,9 @@ font-family:'IBM Plex Sans'
 	background: #F1F3F3;
 	border-radius: 5px;
 	border: none; 
-	width: 96%;
-	margin :5px;
+	width: 20vw;
+	margin :10px;
+	padding-left: 5px;
 	color:gray;
 	height: 5vh;
 }
@@ -128,8 +134,9 @@ font-family:'IBM Plex Sans'
 	color:gray;
 	border-radius: 5px;
 	border: none; 
-	width: 96%; 
-	margin : 5px;
+	width: 20vw; 
+	margin : 10px;
+	padding-left: 5px;
 	color:gray;
 	height: 5vh;
 }
@@ -139,7 +146,7 @@ font-family:'IBM Plex Sans'
 	color:gray;
 	border-radius: 5px;
 	border: none; 
-	width: 96%; 
+	width: 20vw; 
 	margin : 5px;
 	color:gray;
 	height: 5vh;
@@ -149,7 +156,7 @@ font-family:'IBM Plex Sans'
 	background: #61b6a0;
 	border-radius: 5px;
 	border: none;
-	width: 100%;
+	width: 20vw;
 	color: white;
 	height: 5vh;
 }
@@ -181,7 +188,7 @@ font-family:'IBM Plex Sans'
 	flex-direction: row;
     align-items: center;
     justify-content: space-between;
-	width : 18vw;
+	width : 22vw;
 	height: 6vh;
 	margin-left: 5px;
 	margin-right: 0px;
@@ -191,6 +198,7 @@ font-family:'IBM Plex Sans'
 	padding-right: 10px;
 	border-radius: 10px;
 }
+
 
 .btn_book{
 	background: #61b6a0;
@@ -229,4 +237,8 @@ A{
 .top{
     text-decoration: none;
     color: black;
+}
+
+.top:hover{
+	color: #26C855;
 }

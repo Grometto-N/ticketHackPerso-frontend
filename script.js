@@ -53,7 +53,7 @@ document.querySelector('#btn2').addEventListener('click', function(){
     const departure = document.querySelector('#dep_input').value;
     const arrival = document.querySelector('#arr_input').value;
     const date = document.querySelector('#date_input').value;
-    fetch('http://localhost:3000/trips/travels',
+    fetch('https://ticket-hack-perso-backend.vercel.app/trips/travels',
     {method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({departure, arrival, date })})

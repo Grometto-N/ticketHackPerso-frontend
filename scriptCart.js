@@ -87,7 +87,7 @@ function update_Btn_purchase(){
     document.querySelector('.btn_purchase').addEventListener('click', function () {
         console.log('click purchase')
          //on enregistre les données dans book
-        fetch('http://localhost:3000/books/purchase', {
+        fetch('https://ticket-hack-perso-backend.vercel.app/books/purchase', {
             method: 'POST',  
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({trips : the_carts})} )
@@ -107,7 +107,7 @@ function update_Btn_purchase(){
 
 //  AFFICHAGE
 if(the_carts && the_carts.length > 0 ){
-    fetch('http://localhost:3000/trips/carts', { 
+    fetch('https://ticket-hack-perso-backend.vercel.app/trips/carts', { 
         method: 'POST',  
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({trips : the_carts})

@@ -16,7 +16,7 @@ function oneBook(trip){
     return allRow;
  };
 
- fetch('http://localhost:3000/books').then(response => response.json())
+ fetch('https://ticket-hack-perso-backend.vercel.app/books').then(response => response.json())
  .then(data => {
     if ( data.result){
     document.querySelector('#travelTable').innerHTML = all_books(data.travels)}
